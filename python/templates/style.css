@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+}
+
+.container {
+    padding: 30px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.blue {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+
+.green {
+    background: linear-gradient(135deg, #10b981, #22c55e);
+}
+
+.pink {
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+}
+
+.grafico {
+    margin-top: 40px;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+}
+.ranking {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rank-card {
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.foto {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
