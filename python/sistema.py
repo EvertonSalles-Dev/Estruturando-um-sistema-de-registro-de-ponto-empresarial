@@ -181,4 +181,11 @@ def abrir_sistema(usuario):
     janela.mainloop()
     cursor.execute("SELECT foto FROM usuarios WHERE usuario=?", (usuario,))
 resultado = cursor.fetchone()
-foto_usuario = resultado[0] if resultado else None
+foto_usuario = resultado[0] if resultado else None 
+from flask import Flask
+ 
+app = Flask(__name__)
+ 
+@app.route("/")
+def hello_world():
+    return {"message": "Hello, World!"}
