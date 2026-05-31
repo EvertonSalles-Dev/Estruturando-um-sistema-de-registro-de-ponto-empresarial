@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, redirect
 import sqlite3
 import os
 import base64
@@ -9,13 +9,13 @@ from services.admin_service import buscar_resumo
 from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask(__name__)
-app.secret_key = "123"
-
+ @app.route("/favicon.ico")
+def favicon():
+    # /vercel.svg is automatically served when included in the public/** directory.
+    return redirect("/vercel.svg", code=307)
 
 criar_tabelas()
 
-app = Flask(__name__)
-app.secret_key = "123"
 
 @app.route("/recuperar", methods=["GET", "POST"])
 def recuperar_senha():
