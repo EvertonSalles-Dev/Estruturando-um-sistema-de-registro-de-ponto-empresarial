@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Meu Perfil</title>
+
+<style>
+body {
+    background: #0f172a;
+    color: white;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px;
+    background: #3b82f6;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>👤 Meu Perfil</h2>
+
+    <img src="{{ foto_usuario if foto_usuario else '/static/perfil/fotos/default.png' }}">
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="foto" accept="image/*"><br><br>
+        <button type="submit">Atualizar Foto</button>
+    </form>
+
+    <br>
+    <a href="/sistema" style="color:#3b82f6;">← Voltar</a>
+
+</div>
+
+</body>
+</html>

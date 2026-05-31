@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recuperar Senha</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    color: white;
+}
+
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: #3b82f6;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Recuperar Senha</h2>
+
+    <form method="POST">
+        <input type="text" name="usuario" placeholder="Digite seu usuario" required>
+        <button type="submit">Recuperar</button>
+    </form>
+
+    <p style="margin-top:10px;">
+        <a href="/" style="color:#60a5fa;">Voltar ao login</a>
+    </p>
+
+    {% if mensagem %}
+        <p>{{ mensagem }}</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
